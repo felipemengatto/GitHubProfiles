@@ -1,0 +1,32 @@
+{
+  "name": "SocialBase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-http-loader": "git+https://github.com/wongatech/angular-http-loader.git",
+    "angular-route": "^1.5.9",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.9",
+    "karma-read-json": "^1.1.0",
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-useref": "latest",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

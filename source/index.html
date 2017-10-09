@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Git Profiles - Projetos/Star/Forks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>
+    <!-- build:css assets/css/main.css -->
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css" /> <!-- css fonts e icons -->
+    <link rel="stylesheet" href="assets/css/app-style.css" /> <!-- css comum da aplicação -->
+    <link rel="stylesheet" href="app/components/git-user/git-user.css" /> <!-- css de cada componente -->
+    <!-- endbuild -->
+</head>
+<body ng-app="AppGitHub">
+
+    <div class="wrapper">
+
+        <header class="box-topo">
+            <a href="#/inicio">
+                <img src="./assets/imagem/git-fork.png">
+            </a>
+        </header><!-- end .box-topo -->
+        
+        <section class="box-content">
+            <ng-view></ng-view>
+        </section><!-- end .box-content -->
+        
+        <!-- Diretiva de Loading -->
+        <div ng-http-loader template="./app/directives/loading-template/loading.directive.html"></div><!-- end .http-loader -->
+        
+    </div><!-- end .wrapper -->
+
+    <!-- Angular Dependencias -->
+    <!-- build:js assets/js/components.min.js  -->
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <script src="../node_modules/angular-http-loader/app/package/js/angular-http-loader.js"></script>
+    <!-- endbuild -->
+
+    <!-- Angular APP -->
+    <!-- build:js assets/js/app.min.js  -->
+    <script src="./app/app.module.js"></script>
+    <script src="./app/app.config.js"></script>
+    <script src="./app/directives/alert-box/alert-box.directive.js"></script>
+    <script src="./app/components/git-user/git-user.controller.js"></script>
+    <script src="./app/components/git-user/git-user.service.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>

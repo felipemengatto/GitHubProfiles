@@ -1,0 +1,78 @@
+<section class="box-git-user">
+    
+    <div class="box-git-user-data">
+        <ul>
+            <li class="box-git-user-data-item">
+                <a ng-href="{{gitUserCtrl.userListData.html_url}}" target="_blank">
+                    <img ng-src="{{gitUserCtrl.userListData.avatar_url}}&s=200">
+                </a>
+            </li>
+            <li class="box-git-user-data-item">
+                <a ng-href="{{gitUserCtrl.userListData.html_url}}" target="_blank">
+                    <h1 class="style-titulo">{{gitUserCtrl.userListData.name}}</h1>
+                </a>
+            </li>
+            <li class="box-git-user-data-item box-git-user-data-shearch">
+
+				<form id="formSearch" name="formSearch" novalidate>
+	                <label for="profile" class="style-subtitulo">Buscar por Profile Name:</label>
+	                <input name="profile" type="text" 
+	                    ng-model="profileName"
+	                    placeholder="ex: cumpadiwashington" required />
+	                <button class="btn btn-success" ng-disabled="formSearch.$invalid" ng-click="gitUserCtrl.findUserData(profileName);">
+	                    Buscar
+	                </button>
+				</form>
+
+            </li>
+            <li>
+                <alert-box tipo="info" msg="{{gitUserCtrl.userListData.message}}" mostrar="gitUserCtrl.userListData.message != null "></alert-box>
+            </li>
+        </ul>
+    </div><!-- Fim .box-git-user-data -->
+
+    <div class="box-git-user-repo">
+
+        <div class="box-git-user-repo-titulo">
+            <h1 class="style-titulo"> Repositórios: </h1>
+            <input class="box-git-user-repo-search" type="text" 
+                    ng-model="searchProfile"
+                    ng-model-options="{updateOn:'default blur', debounce: {default: 500, blur: 0}}"
+                    placeholder="Buscar por repositório específico" />
+        </div><!-- Fim .timeline-titulo -->
+
+        <div class="box-git-user-repo-item" ng-repeat="item in userListRepoLocal = (gitUserCtrl.userListRepo | filter: searchProfile)">
+            
+            <div class="box-git-user-repo-item-data">
+                <ul>
+                    <li>
+                        <h3 class="style-titulo">
+                            <a ng-href="{{item.html_url}}" target="_blank">
+                                {{item.name}}
+                            </a>
+                        </h3>
+                    </li>
+                    <li>
+                        <i ng-if=" item.language != null " class="box-git-user-repo-item-icon fa fa-info-circle fa-lg" aria-hidden="true"></i>
+                        <span>{{item.language}}</span>
+
+                        <i class="box-git-user-repo-item-icon fa fa-star fa-lg" aria-hidden="true"></i>
+                        <span>{{item.stargazers_count}}</span>
+
+                        <i class="box-git-user-repo-item-icon fa fa-code-fork fa-lg" aria-hidden="true"></i>
+                        <span>{{item.forks_count}}</span>
+
+                        <i class="box-git-user-repo-item-icon fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
+                        <span>{{item.owner.login}}</span>
+                    </li>
+                </ul>
+            </div><!-- Fim .box-git-user-repo-item-data -->
+        
+        </div><!-- Fim .box-git-user-repo-item -->
+    
+        <alert-box tipo="info" msg="Ops! Nenhum Repositório Encontrado :(" mostrar="!userListRepoLocal.length"></alert-box>
+
+    </div><!-- Fim .box-git-user-repo -->
+
+</section><!-- Fim .box-git-user -->
+        

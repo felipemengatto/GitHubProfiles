@@ -1,0 +1,233 @@
+/* CSS RESET DE DOMINIO PUBLICO */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*css reset*/
+*:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    outline: none;
+    text-decoration:none;
+    color:#333;
+}
+
+/* FONT-FACE */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/fonts-lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/fonts-lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/fonts-lato/Lato-Regular.ttf') format('truetype');
+}
+
+/* CSS DE ESTILOS*/
+
+.style-titulo{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.style-subtitulo{
+    font-size: 1em;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #6B6969;
+    text-indent: 10px;
+}
+
+.loading-application{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* alerts */
+.alert{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-size: 1.3em;
+    color: #FFF;
+    border-radius: 2px;
+    text-align: center;
+    -webkit-animation: fadeout 8s linear 1 forwards;
+    animation: fadeout 8s linear 1 forwards;
+}
+
+@-webkit-keyframes fadeout {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    50% { opacity: 1; }
+    70% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeout {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    50% { opacity: 1; }
+    70% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.info{
+    color:#00529B;
+    border: 1px solid #00529B;
+    background: #BDE5F8;
+}
+
+.warning{
+    background: #FB7D00;
+    border: 1px solid #DD6F00;
+}
+
+.danger {
+    background: #bd362f;
+    border: 1px solid #992C26;
+}
+
+.success {
+    background: #51a351;
+    border: 1px solid #316431;
+}
+
+/* botoes */
+.btn {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 5px 0;
+    color: #FFF;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #FFF;
+    opacity:0.9;
+    text-decoration: none;
+}
+
+.btn-warning{
+    background: #FB7D00;
+    border: 1px solid #DD6F00;
+}
+
+.btn-danger {
+    background: #bd362f;
+    border: 1px solid #992C26;
+}
+
+.btn-success {
+    background: #51a351;
+    border: 1px solid #316431;
+}
+
+/* CSS DA APLICAÇÃO */
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color:#333;
+}
+
+.wrapper{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.box-topo{
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.box-content{
+    width: 100%;
+    margin: 70px 0 30px 0;
+}

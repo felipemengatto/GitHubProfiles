@@ -1,0 +1,129 @@
+.box-git-user{
+    width: 100%;
+    -webkit-display: -webkit-box;
+    -webkit-display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.box-git-user-data{
+    width: 20%;
+    background: #DDDDDD;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    order: 1;
+}
+
+li.box-git-user-data-item{
+    width: 100%;
+    padding: 10px 0 0 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.box-git-user-data img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.box-git-user-data-shearch{
+    width: 100%;
+    margin: 15px 0 0 0;
+    border-top: 1px solid #CCC;
+}
+
+.box-git-user-data-shearch label{
+    margin: 0 0 5px 0;
+    display: inline-block;
+}
+
+.box-git-user-repo{
+    width: 80%;
+    margin: 0 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    order: 2;
+}
+
+.box-git-user-repo-titulo{
+    width: 100%;
+    margin: 0 0 2px 0;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #333;
+    color: #FFF;
+    display: inline-block;
+}
+
+input.box-git-user-repo-search{
+    margin: 3px 0 0 0;
+}
+
+.box-git-user-repo-item{
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #DDDDDD;
+    position: relative;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.box-git-user-repo-item-data{
+    width: 100%;
+    margin: 0 0 0 10px;
+    display: inline-block;
+}
+
+.box-git-user-repo-item-data li{
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0;
+    text-decoration: underline;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.box-git-user-repo-item-icon{
+    padding: 0 0 0 10px;
+}
+
+@media screen and (max-width: 979px)  {
+
+    .box-git-user{
+        flex-direction: column;
+    }
+    
+    .box-git-user-data{
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .box-git-user-data img{
+        width: 80px;
+        border-radius: 100%;
+    }
+
+    .box-git-user-repo{
+        width: 100%;
+    }
+    
+}
